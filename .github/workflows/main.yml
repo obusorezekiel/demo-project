@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,4 +29,5 @@ jobs:
           uses: docker/build-push-action@v5
           with:
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO }}:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO }}:${{ github.run_id }}
+
