@@ -64,7 +64,8 @@ jobs:
           git commit -m "Update image tag [skip ci]"
         env:
           github_token: ${{ secrets.GH_PAT}}
-            
+        
+        #Commit
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
