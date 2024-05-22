@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Get Image Tag
         id: tag
-        run: echo "tag=${GITHUB_SHA}" >> $GITHUB_OUTPUT
+        run: echo "tag=${{ github.run_id }}" >> $GITHUB_OUTPUT
     
       - name: Checkout code
         uses: actions/checkout@v3
@@ -51,7 +51,7 @@ jobs:
     
       - name: Update Deployment YAML
         run: |
-          sed -i "s|image:.*$|image: obusorezekiel/demo-node-app:${{ steps.tag.outputs.tag }}|g" deploy/deployment.yml
+          sed -i "s|image:.*$|image: obusorezekiel/demo-node-app:${{ github.run_id }}|g" deploy/deployment.yml
           cat deploy/deployment.yml
         env:
           github_token: ${{ secrets.GH_PAT }}    
