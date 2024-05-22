@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Ensure GITHUB_TOKEN has write permissions
+
 jobs:
   build-test:
     name: Build Layer for Pipeline
