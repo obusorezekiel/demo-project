@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-node-app
+  labels:
+    app: demo-node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-node-app
+  template:
+    metadata:
+      labels:
+        app: demo-node-app
+    spec:
+      containers:
+        - name: demo-node-app
+          image: obusorezekiel/demo-node-app:30ae562afe731fb9cc44f465340e0a39416721e7
+          ports:
+            - containerPort: 5000
