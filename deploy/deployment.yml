@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demo-node-app
-          image: obusorezekiel/demo-node-app:30ae562afe731fb9cc44f465340e0a39416721e7
+          image: obusorezekiel/demo-node-app:9198372082
           ports:
             - containerPort: 5000
