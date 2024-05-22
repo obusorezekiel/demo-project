@@ -66,8 +66,8 @@ jobs:
           github_token: ${{ secrets.GH_PAT}}
             
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: ${{ secrets.GH_PAT}}
-          branch: ${{ github.ref }}
+          github_token: ${{ secrets.GH_PAT }}
+          branch: main
             
