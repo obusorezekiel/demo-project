@@ -66,9 +66,8 @@ jobs:
           github_token: ${{ secrets.GH_PAT}}
       #Corrected one here      
       - name: Push changes
-        uses: ad-m/github-push-action@v1
+        uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          branch: main  # Assuming you are pushing to the 'main' branch
-
+          github_token: ${{ secrets.GH_PAT}}
+          branch: main
             
