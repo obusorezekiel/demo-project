@@ -17,8 +17,8 @@ This project demos a CI/CD process using GitHub Actions for continuous integrati
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/obusorezekiel/demo-node-app
-   cd demo-node-app
+   git clone https://github.com/obusorezekiel/demo-project
+   cd demo-project
    cd .github/workflows
    vi main.yml 
 
